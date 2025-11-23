@@ -19,7 +19,7 @@ jobs:
                 php-version: '7.4'
 
             - name: Install dependencies
-              run: composer update --prefer-dist --no-progress --no-suggest
+              run: composer update --prefer-dist --no-progress --no-security-blocking
 
             - name: Run script
               run: vendor/bin/phpcs

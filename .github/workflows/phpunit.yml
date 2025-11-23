@@ -65,7 +65,7 @@ jobs:
       run: php tests/phpinfo.php
 
     - name: Composer install
-      run: composer require --prefer-dist --no-progress --no-suggest phpseclib/phpseclib ${{ matrix.phpseclib }}
+      run: composer require --prefer-dist --no-progress --no-security-blocking phpseclib/phpseclib ${{ matrix.phpseclib }}
 
     - name: Wait for broker service
       run: php ./tests/wait_broker.php
